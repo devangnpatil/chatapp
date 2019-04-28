@@ -1,6 +1,6 @@
 // make connection
 
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect('https://vaatkarovaat.herokuapp.com/');
 
 // query dom
 var message = document.getElementById('message'),
