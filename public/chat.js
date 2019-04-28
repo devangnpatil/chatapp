@@ -20,6 +20,16 @@ btn.addEventListener('click', function(e){
     
 });
 
+handle.addEventListener('blur', function(e){
+    e.preventDefault();
+    this.setAttribute('disabled', 'disabled');
+})
+
+handle.addEventListener('click', function(e){
+    e.preventDefault();
+    this.removeAttribute('disabled', 'disabled');
+})
+
 message.addEventListener('keypress', function(e){
     socket.emit('typing',handle.value);
 });
