@@ -1,6 +1,6 @@
 // make connection
 
-var socket = io.connect('https://vaatkarovaat.herokuapp.com/');
+var socket = require('socket.io')(server, {path: '/octagon/socket.io'});
 
 // query dom
 var message = document.getElementById('message'),
